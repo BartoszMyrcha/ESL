@@ -409,7 +409,7 @@ public class Wybor_systemow extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Dalej);
-        Dalej.setBounds(800, 550, 200, 110);
+        Dalej.setBounds(800, 520, 204, 162);
 
         exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/exit.png"))); // NOI18N
         exit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));

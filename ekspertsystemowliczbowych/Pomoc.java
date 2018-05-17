@@ -43,9 +43,7 @@ public class Pomoc extends javax.swing.JFrame {
         Tlo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1024, 768));
         setMinimumSize(new java.awt.Dimension(1024, 768));
-        setPreferredSize(new java.awt.Dimension(1024, 768));
         setResizable(false);
         setSize(new java.awt.Dimension(1024, 768));
         getContentPane().setLayout(null);
@@ -73,7 +71,7 @@ public class Pomoc extends javax.swing.JFrame {
         jPanel1.add(Exit);
         Exit.setBounds(980, 0, 45, 29);
 
-        Prev.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/prev.png"))); // NOI18N
+        Prev.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/wstecz.png"))); // NOI18N
         Prev.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Prev.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -81,9 +79,9 @@ public class Pomoc extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Prev);
-        Prev.setBounds(10, 421, 90, 68);
+        Prev.setBounds(10, 421, 82, 64);
 
-        Next.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/next.png"))); // NOI18N
+        Next.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/nastepne.png"))); // NOI18N
         Next.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Next.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -91,7 +89,7 @@ public class Pomoc extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Next);
-        Next.setBounds(920, 421, 90, 68);
+        Next.setBounds(920, 423, 82, 64);
 
         Grafika.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pomoc1.png"))); // NOI18N
         jPanel1.add(Grafika);
@@ -116,6 +114,20 @@ public class Pomoc extends javax.swing.JFrame {
         menu.setExtendedState(JFrame.MAXIMIZED_BOTH); //maksymalizuj okno menu
         menu.setVisible(true); //ustaw okno menu jako widoczne
     }//GEN-LAST:event_ExitMousePressed
+
+   /**
+     * Wyświetlenie poprzedniego obrazu pomocy.
+     * @param evt zdarzenie myszy
+     */
+    private void PrevMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PrevMousePressed
+        if(nr_strony>1)
+        {
+            nr_strony--;
+            Grafika.setIcon(new ImageIcon(getClass().getResource("/img/pomoc"+nr_strony+".png")));
+            Next.setVisible(true);
+        }
+        if(nr_strony==1) Prev.setVisible(false);
+    }//GEN-LAST:event_PrevMousePressed
     /**
      * Wyświetlenie kolejnego obrazu pomocy.
      * @param evt zdarzenie myszy
@@ -129,19 +141,6 @@ public class Pomoc extends javax.swing.JFrame {
         }
         if(nr_strony==3) Next.setVisible(false);
     }//GEN-LAST:event_NextMousePressed
-    /**
-     * Wyświetlenie poprzedniego obrazu pomocy.
-     * @param evt zdarzenie myszy
-     */
-    private void PrevMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PrevMousePressed
-        if(nr_strony>1)
-        {
-            nr_strony--;
-            Grafika.setIcon(new ImageIcon(getClass().getResource("/img/pomoc"+nr_strony+".png")));
-            Next.setVisible(true);
-        }
-        if(nr_strony==1) Prev.setVisible(false);
-    }//GEN-LAST:event_PrevMousePressed
 
     /**
      * @param args the command line arguments

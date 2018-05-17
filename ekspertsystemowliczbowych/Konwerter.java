@@ -40,7 +40,7 @@ public class Konwerter extends javax.swing.JFrame {
         label_liczba = new javax.swing.JLabel();
         label_syst_wej = new javax.swing.JLabel();
         label_syst_wyj = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        konwertuj = new javax.swing.JLabel();
         Tlo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -117,15 +117,15 @@ public class Konwerter extends javax.swing.JFrame {
         jPanel1.add(label_syst_wyj);
         label_syst_wyj.setBounds(20, 320, 563, 84);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/konwertuj.png"))); // NOI18N
-        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+        konwertuj.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/konwertuj.png"))); // NOI18N
+        konwertuj.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        konwertuj.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                jLabel1MousePressed(evt);
+                konwertujMousePressed(evt);
             }
         });
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(384, 610, 256, 68);
+        jPanel1.add(konwertuj);
+        konwertuj.setBounds(350, 600, 319, 84);
 
         Tlo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/tlo.jpg"))); // NOI18N
         Tlo.setToolTipText("Wprowadź liczbę");
@@ -222,7 +222,7 @@ public class Konwerter extends javax.swing.JFrame {
      * Wykrycie wciśnięcia napisu "Konwertuj" - przeprowadzenie konwersji (z systemu wejściowego na 10 oraz z 10 na system wyjściowy) i wyświetlenie jej wyniku.
      * @param evt zdarzenie myszy
      */
-    private void jLabel1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MousePressed
+    private void konwertujMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_konwertujMousePressed
         label_liczba.setText("");
         liczba.wartosc=konwertuj_na_10(liczba_textfield.getText().toCharArray(),system_wyj);
         char[] liczba_char = liczba.konwertuj_na(system_wyj);
@@ -235,7 +235,7 @@ public class Konwerter extends javax.swing.JFrame {
         
          
             
-    }//GEN-LAST:event_jLabel1MousePressed
+    }//GEN-LAST:event_konwertujMousePressed
     /**
      * Metoda sprawdzająca aktualny wybór comboboxa zawierającego wybrany system wyjściowy.
      * @param evt zdarzenie
@@ -339,8 +339,8 @@ public class Konwerter extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Tlo;
     private javax.swing.JLabel exit;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel konwertuj;
     private javax.swing.JLabel label_liczba;
     private javax.swing.JLabel label_syst_wej;
     private javax.swing.JLabel label_syst_wyj;

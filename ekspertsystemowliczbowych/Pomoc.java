@@ -133,13 +133,13 @@ public class Pomoc extends javax.swing.JFrame {
      * @param evt zdarzenie myszy
      */
     private void NextMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NextMousePressed
-        if(nr_strony<3)
+        if(nr_strony<5)
         {
             nr_strony++;
             Grafika.setIcon(new ImageIcon(getClass().getResource("/img/pomoc"+nr_strony+".png")));
             Prev.setVisible(true);
         }
-        if(nr_strony==3) Next.setVisible(false);
+        if(nr_strony==5) Next.setVisible(false);
     }//GEN-LAST:event_NextMousePressed
 
     /**
